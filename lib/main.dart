@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:iot/screens/login.dart';
-
+import 'package:firebase_core/firebase_core.dart';
 import 'constants/colors_and_size.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MainApp());
 }
 
